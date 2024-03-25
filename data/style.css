@@ -1,0 +1,64 @@
+*{
+    margin: 0 auto 0 auto;
+}
+#header h1{
+    margin: 0;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 87px;
+    color: #900C3F;
+    height: 100px;
+    padding: 40px 0 0px 0;
+}
+
+body{
+    margin: 0px;
+   padding: 0;
+   background-image: url(background.png),url(background2.jpg);
+   background-repeat: no-repeat;
+   background-color: white;
+}
+
+#button{
+    margin: 15px 0 0 790px;
+    float: left;
+}
+#button2{
+    margin: 15px 785px 0 0px;
+    float: right;
+}
+#fan{
+    width: 128;
+    height: 128;
+    margin:140px 770px 0px 0px ;
+    float: right;
+}
+#bulb{
+    width: 128;
+    height: 128;
+    float: left;
+    margin:140px 0px 0px  800px ;
+}
+
+#header h1 span.colortext{
+    color: honeydew;
+}
+a:link{
+    text-decoration: none;
+}
+a{
+    color: white;
+}
+#btn{
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+}

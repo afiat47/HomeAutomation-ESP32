@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Home Page</title>
+    
+    <script>
+        var flag;
+        var led;
+        var fan;
+      function sendData() {
+      
+        var x = document.getElementById("btn");
+        if (x.innerHTML === "ON") {
+          x.innerHTML = "OFF";
+        } else {
+          x.innerHTML = "ON";
+        }
+      
+        led=1;
+        if(flag==1){
+          led=0;
+          flag=0;
+        }
+        else{
+          flag=1;
+        }
+      
+        if(led==1){
+          document.getElementById('myimage') 
+          .src="bulb.png";  
+        }
+        else if (led==0){
+            document.getElementById('myimage') 
+          .src="offbulb.png";  
+        }
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("LEDState").innerHTML =
+            this.responseText;
+          }
+        }
+        xhttp.open("GET", "setLED?LEDstate="+led, true);
+        xhttp.send();
+      }
+    </script>
+</head>
+<body>
+
+    <div id="header">
+        <h1><span class="colortext">Afiat's</span> Smart Home</h1>
+    </div>
+    <div id="fan">
+        <img src="fan.png">
+    </div>
+    <div id="bulb">
+        <img id='myimage' src="offbulb.png">
+    </div>
+   <div id="button">
+       
+    <button type="button" id="btn" onclick="sendData()">ON</button>
+   </div>
+   <div id="button2">
+    <button type="button" id="btn" onclick="sendData()">ON</button>    
+   </div>
+</body>
+</html>
